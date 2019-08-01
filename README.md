@@ -11,7 +11,12 @@ bin/windows/kafka-server-start.bat config/server.properties
 ## eventTopic 이라는 Topic 에 메세지 통신
 
 1. publish  
+
+---- window   
 bin/windows/kafka-console-produce.bat --broker-list http://34.85.73.178:31090 --topic eventTopic
+
+---- mac  
+/usr/local/bin/windows/kafka-console-produce --broker-list http://34.85.73.178:31090 --topic eventTopic
 
 
 2. consume  
