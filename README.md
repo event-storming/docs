@@ -13,7 +13,7 @@ bin/windows/kafka-server-start.bat config/server.properties
 1. publish  
 
 ---- window   
-bin/windows/kafka-console-produce.bat --broker-list http://34.85.73.178:31090 --topic eventTopic
+bin/windows/kafka-console-producer.bat --broker-list http://34.85.73.178:31090 --topic eventTopic
 
 ---- mac  
 /usr/local/bin/kafka-console-producer --broker-list http://34.85.73.178:31090 --topic eventTopic
