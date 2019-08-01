@@ -65,6 +65,11 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://34.85.73.178:310
 git clone https://github.com/event-storming/[username]/products.git
 ```
 
+## httpie 설치
+
+https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
+
+
 
 ## 템플릿 프로젝트는 주문이 발생하였을때 연관되어서 이벤트가 발생하도록 설계됨
 
