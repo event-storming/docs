@@ -16,7 +16,7 @@ bin/windows/kafka-server-start.bat config/server.properties
 bin/windows/kafka-console-produce.bat --broker-list http://34.85.73.178:31090 --topic eventTopic
 
 ---- mac  
-/usr/local/bin/windows/kafka-console-produce --broker-list http://34.85.73.178:31090 --topic eventTopic
+/usr/local/bin/kafka-console-producer --broker-list http://34.85.73.178:31090 --topic eventTopic
 
 
 2. consume  
