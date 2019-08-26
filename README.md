@@ -13,20 +13,20 @@ bin/windows/kafka-server-start.bat config/server.properties
 1. publish  
 
 ---- window   
-bin/windows/kafka-console-producer.bat --broker-list http://34.85.73.178:31090 --topic eventTopic
+bin/windows/kafka-console-producer.bat --broker-list http://35.200.47.242:31090 --topic eventTopic
 
 ---- mac  
-/usr/local/bin/kafka-console-producer --broker-list http://34.85.73.178:31090 --topic eventTopic
+/usr/local/bin/kafka-console-producer --broker-list http://35.200.47.242:31090 --topic eventTopic
 
 
 2. consume  
 
 ---- window   
-bin/window/kafka-console-consumer.bat --bootstrap-server http://34.85.73.178:31090 --topic eventTopic --from-beginning
+bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
 
 
 ---- mac  
-/usr/local/bin/kafka-console-consumer --bootstrap-server http://34.85.73.178:31090 --topic eventTopic --from-beginning
+/usr/local/bin/kafka-console-consumer --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
 
 ## 이벤트 발송 시나리오
 
