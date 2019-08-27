@@ -32,6 +32,7 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31
 
 
 주문이 발생함 – order  
+상품 수량 변경됨 - product
 배송 시작됨 – delivery  
 배송 완료됨 – delivery  
 고객 설문조사 완료됨 – marketing  
@@ -42,7 +43,8 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31
 ## 팀별 이벤트 발송
 
 ```
-{"type":"OrderPlaced","stateMessage":"주문이 들어옴","productId":1,"orderId":2,"productName":"TV","quantity":1,"price":0,"customerName":"홍길동","customerAddr":"서울시"}
+{"type":"OrderPlaced","stateMessage":"주문이 발생함","productId":1,"orderId":1,"productName":"TV","quantity":3,"price":1000,"customerName":"홍길동","customerAddr":"서울시"}
+{"type":"ProductChanged","stateMessage":"상품 변경이 발생함","productId":1,"productName":"TV","productPrice":1000,"productStock":91}
 
 {"type":"DeliveryStarted","stateMessage":"배송이 시작됨","deliveryId":1,"orderId":2,"customerName":"홍길동","deliveryAddress":"서울시","deliveryState":"DeliveryStarted"}
 {"type":"DeliveryCompleted","stateMessage":"배송이 완료됨","deliveryId":1,"orderId":2,"customerName":"홍길동","deliveryAddress":"서울시","deliveryState":"DeliveryCompleted"}
@@ -73,5 +75,5 @@ https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%
 
 ## 템플릿 프로젝트는 주문이 발생하였을때 연관되어서 이벤트가 발생하도록 설계됨
 
-http localhost:8081/orders productId=1 productName="TV" quantity=1 customerName="홍길동" customerAddr="서울시"  
+http localhost:8081/orders productId=1 quantity=3 customerName="홍길동" customerAddr="서울시"  
 
