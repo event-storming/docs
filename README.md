@@ -32,7 +32,7 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31
 
 
 주문이 발생함 – order  
-상품 수량 변경됨 - product
+상품 수량 변경됨 - product  
 배송 시작됨 – delivery  
 배송 완료됨 – delivery  
 고객 설문조사 완료됨 – marketing  
