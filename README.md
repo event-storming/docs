@@ -37,8 +37,8 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31
 배송 시작됨 - 배송 완료됨 – delivery  
 배송 완료됨 - 상품추천 – marketing  
 설문조사 - 블랙리스트 추가 - service_center  
-배송 완료됨 - 구매상품 추가 - service_center  
-구매상품 추가 - 상품이 입고됨 - products  
+블랙리스트 추가 - mypage
+
 
 
 ## 팀별 이벤트 발송
