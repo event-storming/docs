@@ -41,22 +41,75 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31
 
 
 
-## 팀별 이벤트 발송
+## 1번 시나리오 - ui 없이 order, product, delivery, marketing, service_center 프로젝트를 실행하고 주문이벤트 발생
 
 ```
-{"type":"OrderPlaced","stateMessage":"주문이 발생함","productId":1,"orderId":1,"productName":"TV","quantity":3,"price":1000,"customerName":"홍길동","customerAddr":"서울시"}
-{"type":"ProductChanged","stateMessage":"상품 변경이 발생함","productId":1,"productName":"TV","productPrice":1000,"productStock":91}
+#### product 서비스 실행시 발생함 - 상품이 입력됨
+{"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":1,"productName":"TV","productPrice":10000,"productStock":10,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
+{"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":2,"productName":"RADIO","productPrice":20000,"productStock":20,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
+{"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":3,"productName":"NOTEBOOK","productPrice":30000,"productStock":30,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
+{"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":4,"productName":"TABLE","productPrice":40000,"productStock":40,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
+{"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":5,"productName":"CLOCK","productPrice":50000,"productStock":50,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
 
-{"type":"DeliveryStarted","stateMessage":"배송이 시작됨","deliveryId":1,"orderId":2,"customerName":"홍길동","deliveryAddress":"서울시","deliveryState":"DeliveryStarted"}
-{"type":"DeliveryCompleted","stateMessage":"배송이 완료됨","deliveryId":1,"orderId":2,"customerName":"홍길동","deliveryAddress":"서울시","deliveryState":"DeliveryCompleted"}
+#### http localhost:8081/orders productId=1 quantity=3 customerName="1@uengine.org" customerAddr="서울시" 입력시 발생함
+{"eventType":"OrderPlaced","timestamp":"20190905150114","stateMessage":"주문이 발생함","productId":1,"orderId":1,"productName":"TV","quantity":3,"price":10000,"customerName":"1@uengine.org","customerAddr":"서울시"}
+{"eventType":"ProductChanged","timestamp":"20190905150114","stateMessage":"상품 변경이 발생함","productId":1,"productName":"TV","productPrice":10000,"productStock":7,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
+{"eventType":"DeliveryStarted","timestamp":"20190905150114","stateMessage":"배송이 시작됨","deliveryId":1,"orderId":1,"customerName":"1@uengine.org","deliveryAddress":"서울시","deliveryState":"DeliveryStarted"}
+{"eventType":"DeliveryCompleted","timestamp":"20190905150114","stateMessage":"배송이 완료됨","deliveryId":1,"orderId":1,"customerName":"1@uengine.org","deliveryAddress":"서울시","deliveryState":"DeliveryCompleted"}
 
-{"type":"SurveyCompleted","stateMessage":"설문이 완료됨","customerName":"홍길동","surveyMessage":"넉넉하게 수량 챙겨주세요"}
-
-{"type":"ProductRequired","stateMessage":"추가 물량이 필요함","productName":"리모콘"}
-
-{"type":"ProductChanged","stateMessage":"상품 변경이 발생함","productId":1,"productName":"리모콘","productPrice":10000,"productStock":21}
+#### http http://localhost:8084/surveys customerName="1@uengine.org" surveyMessage="nonooooo" productSatisfaction=1 입력시 발생함
+{"eventType":"SurveyCompleted","timestamp":"20190905150424","stateMessage":"설문이 완료됨","customerName":"1@uengine.org","surveyMessage":"nonooooo","productSatisfaction":1}
+{"eventType":"BlackListAdded","timestamp":"20190905150424","stateMessage":"블랙리스트로 추가됨","customerName":"1@uengine.org"}
 
 ```
+## 2번 시나리오 mypage 를 실행 후에, 발생된 이벤트를 모두 받아서 조회를 함
+mypage 는 CQRS 모형이며, 그중 READ 부분을 담당한다.  
+각종 일어난 이벤트들을 받아서, 자신만의 DB 에 저장을 하여 보여주는 서비스이다.  
+> mypage 의 정보는 DB 에 저장을 하여서.. orderid 부분이 안맞을수도 있습니다.
+
+```
+### 유저 정보 조회 -> http http://localhost:8086/users/1@uengine.org  
+{
+    "_links": {
+        "self": {
+            "href": "http://localhost:8086/users/1@uengine.org"
+        },
+        "user": {
+            "href": "http://localhost:8086/users/1@uengine.org"
+        }
+    },
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "address": "서울시 논현동",
+    "credentialsNonExpired": true,
+    "enabled": true,
+    "money": -900000,
+    "nickname": "유엔진",
+    "role": null
+}
+
+###  주문 히스토리 조회 -> http http://localhost:8086/mypage/order/1@uengine.org  
+[
+    {
+        "deliveryCompleted": true,
+        "deliveryId": 1,
+        "deliveryStarted": true,
+        "orderId": 1,
+        "payment": 30000,
+        "productId": 1,
+        "productName": "TV",
+        "quantity": 3,
+        "timestamp": "20190905150114",
+        "username": "1@uengine.org"
+    }
+]
+
+```
+
+## 3번 시나리오 ui, gateway, oauth 서버를 띄운후에 화면으로 조회
+http://localhost:8080 
+
+
 
 ## 각 팀별로 event-storming 에 있는 프로젝트를 fork
 
