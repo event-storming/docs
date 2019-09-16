@@ -51,15 +51,15 @@ bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31
 {"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":4,"productName":"TABLE","productPrice":40000,"productStock":40,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
 {"eventType":"ProductChanged","timestamp":"20190905150002","stateMessage":"상품 변경이 발생함","productId":5,"productName":"CLOCK","productPrice":50000,"productStock":50,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
 
-#### http localhost:8081/orders productId=1 quantity=3 customerName="1@uengine.org" customerAddr="서울시" 입력시 발생함
-{"eventType":"OrderPlaced","timestamp":"20190905150114","stateMessage":"주문이 발생함","productId":1,"orderId":1,"productName":"TV","quantity":3,"price":10000,"customerName":"1@uengine.org","customerAddr":"서울시"}
-{"eventType":"ProductChanged","timestamp":"20190905150114","stateMessage":"상품 변경이 발생함","productId":1,"productName":"TV","productPrice":10000,"productStock":7,"imageUrl":"https://github.githubassets.com/images/modules/profile/profile-joined-github.png"}
-{"eventType":"DeliveryStarted","timestamp":"20190905150114","stateMessage":"배송이 시작됨","deliveryId":1,"orderId":1,"customerName":"1@uengine.org","deliveryAddress":"서울시","deliveryState":"DeliveryStarted"}
-{"eventType":"DeliveryCompleted","timestamp":"20190905150114","stateMessage":"배송이 완료됨","deliveryId":1,"orderId":1,"customerName":"1@uengine.org","deliveryAddress":"서울시","deliveryState":"DeliveryCompleted"}
+#### http localhost:8081/orders productId=1 quantity=3 customerId="1@uengine.org" customerName="홍길동" customerAddr="서울시" 입력시 발생함
+{"eventType":"OrderPlaced","timestamp":"20190916151922","stateMessage":"주문이 발생함","productId":2,"orderId":3,"productName":"RADIO","quantity":3,"price":20000,"customerId":"1@uengine.org","customerName":"홍길동","customerAddr":"서울시"}
+{"eventType":"DeliveryStarted","timestamp":"20190916151922","stateMessage":"배송이 시작됨","deliveryId":3,"orderId":3,"customerId":"1@uengine.org","customerName":"홍길동","deliveryAddress":"서울시","deliveryState":"DeliveryStarted"}
+{"eventType":"ProductChanged","timestamp":"20190916151922","stateMessage":"상품 변경이 발생함","productId":2,"productName":"RADIO","productPrice":20000,"productStock":14,"imageUrl":"/goods/img/RADIO.jpg"}
+{"eventType":"DeliveryCompleted","timestamp":"20190916151922","stateMessage":"배송이 완료됨","deliveryId":3,"orderId":3,"customerId":"1@uengine.org","customerName":"홍길동","deliveryAddress":"서울시","deliveryState":"DeliveryCompleted"}
 
-#### http http://localhost:8084/surveys customerName="1@uengine.org" surveyMessage="nonooooo" productSatisfaction=1 입력시 발생함
+#### http http://localhost:8084/surveys customerId="1@uengine.org" surveyMessage="nonooooo" productSatisfaction=1 입력시 발생함
 {"eventType":"SurveyCompleted","timestamp":"20190905150424","stateMessage":"설문이 완료됨","customerName":"1@uengine.org","surveyMessage":"nonooooo","productSatisfaction":1}
-{"eventType":"BlackListAdded","timestamp":"20190905150424","stateMessage":"블랙리스트로 추가됨","customerName":"1@uengine.org"}
+{"eventType":"BlackListAdded","timestamp":"20190905150424","stateMessage":"블랙리스트로 추가됨","customerId":"1@uengine.org"}
 
 ```
 ## 2번 시나리오 mypage 를 실행 후에, 발생된 이벤트를 모두 받아서 조회를 함
@@ -83,7 +83,7 @@ mypage 는 CQRS 모형이며, 그중 READ 부분을 담당한다.
     "address": "서울시 논현동",
     "credentialsNonExpired": true,
     "enabled": true,
-    "money": -900000,
+    "money": 900000,
     "nickname": "유엔진",
     "role": null
 }
@@ -92,15 +92,16 @@ mypage 는 CQRS 모형이며, 그중 READ 부분을 담당한다.
 [
     {
         "deliveryCompleted": true,
-        "deliveryId": 1,
+        "deliveryId": 3,
         "deliveryStarted": true,
-        "orderId": 1,
-        "payment": 30000,
-        "productId": 1,
-        "productName": "TV",
+        "nickName": "홍길동",
+        "orderId": 3,
+        "payment": 60000,
+        "productId": 2,
+        "productName": "RADIO",
         "quantity": 3,
-        "timestamp": "20190905150114",
-        "username": "1@uengine.org"
+        "timestamp": "20190916151922",
+        "userId": "1@uengine.org"
     }
 ]
 
@@ -129,5 +130,5 @@ https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%
 
 ## 템플릿 프로젝트는 주문이 발생하였을때 연관되어서 이벤트가 발생하도록 설계됨
 
-http localhost:8081/orders productId=1 quantity=3 customerName="홍길동" customerAddr="서울시"  
+http localhost:8081/orders productId=1 quantity=3 customerId="1@uengine.org" customerName="홍길동" customerAddr="서울시"
 
