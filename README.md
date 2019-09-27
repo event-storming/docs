@@ -1,32 +1,34 @@
 ## 카프카 설치
 1. 다운로드  
-https://kafka.apache.org/downloads  
-
-2. 주키퍼 실행
-bin/windows/zookeeper-server-start.bat config/zookeeper.properties
-
-3. 카프카 실행
-bin/windows/kafka-server-start.bat config/server.properties
+https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 버전으로 다운로드
 
 ## eventTopic 이라는 Topic 에 메세지 통신
 
-1. publish  
+1. 이벤트 발행하기  
 
 ---- window   
 bin/windows/kafka-console-producer.bat --broker-list http://35.200.47.242:31090 --topic eventTopic
 
 ---- mac  
-/usr/local/bin/kafka-console-producer --broker-list http://35.200.47.242:31090 --topic eventTopic
+bin/kafka-console-producer --broker-list http://35.200.47.242:31090 --topic eventTopic
 
 
-2. consume  
+1. 이벤트 수신하기
 
 ---- window   
-bin/window/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
+bin/windows/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
 
 
 ---- mac  
-/usr/local/bin/kafka-console-consumer --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
+
+
+## 카프카 서버의 실행 (필요한 경우만)
+1. (새창)주키퍼 실행
+bin/windows/zookeeper-server-start.bat config/zookeeper.properties
+1. (새창)카프카 실행
+bin/windows/kafka-server-start.bat config/server.properties
+
 
 ## 이벤트 발송 시나리오
 
