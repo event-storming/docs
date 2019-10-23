@@ -1,3 +1,11 @@
+- 교재:
+https://www.slideshare.net/pongsor/event-storming-based-msa-training-commerce-example-addhandsonv3
+
+- 실습스크립트 룩업:
+https://workflowy.com/s/msa/27a0ioMCzlpV04Ib
+
+
+
 ## 카프카 설치
 1. 다운로드  
 https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 버전으로 다운로드
