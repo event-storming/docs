@@ -9,12 +9,12 @@ https://workflowy.com/s/msa/27a0ioMCzlpV04Ib
 
 
 ## 카프카 설치
-1. 다운로드  
+- 다운로드  
 https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 버전으로 다운로드
 
 ## eventTopic 이라는 Topic 에 메세지 통신
 
-1. 이벤트 발행하기  
+- 이벤트 발행하기  
 
 ---- window   
 bin/windows/kafka-console-producer.bat --broker-list http://35.200.47.242:31090 --topic eventTopic
@@ -23,7 +23,7 @@ bin/windows/kafka-console-producer.bat --broker-list http://35.200.47.242:31090 
 bin/kafka-console-producer --broker-list http://35.200.47.242:31090 --topic eventTopic
 
 
-1. 이벤트 수신하기
+- 이벤트 수신하기
 
 ---- window   
 bin/windows/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
@@ -34,9 +34,9 @@ bin/kafka-console-consumer.sh --bootstrap-server http://35.200.47.242:31090 --to
 
 
 ## 카프카 서버의 실행 (필요한 경우만)
-1. (새창)주키퍼 실행
+- (새창)주키퍼 실행
 bin/windows/zookeeper-server-start.bat config/zookeeper.properties
-1. (새창)카프카 실행
+- (새창)카프카 실행
 bin/windows/kafka-server-start.bat config/server.properties
 
 
@@ -126,9 +126,9 @@ http://localhost:8080
 
 ## 각 팀별로 event-storming 에 있는 프로젝트를 fork
 
-1. 상품개발팀 같은 경우 event-storming/product 프로젝트에 들어가서 오른쪽 상단의 Fork 버튼 클릭
+- 상품개발팀 같은 경우 event-storming/product 프로젝트에 들어가서 오른쪽 상단의 Fork 버튼 클릭
 
-2. IDE 환경에서 해당 git 소스코드를 clone 받아서 개발 함
+- IDE 환경에서 해당 git 소스코드를 clone 받아서 개발 함
 
 ```
 git clone https://github.com/event-storming/[username]/products.git
