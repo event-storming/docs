@@ -12,6 +12,8 @@ https://www.facebook.com/groups/cloudswmoding
 - 이벤트 스토밍 코드 전환  
 http://eventstorming2code.io/  
 
+- 구글 클라우드
+https://cloud.google.com/  
 
 ## 카프카 설치
 - 다운로드  
