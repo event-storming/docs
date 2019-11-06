@@ -6,6 +6,11 @@ https://www.slideshare.net/pongsor/event-storming-based-msa-training-commerce-ex
 - 실습스크립트 룩업:
 https://workflowy.com/s/msa/27a0ioMCzlpV04Ib
 
+- 페이스북 그룹  
+https://www.facebook.com/groups/cloudswmoding  
+
+- 이벤트 스토밍 코드 전환  
+http://eventstorming2code.io/  
 
 
 ## 카프카 설치
