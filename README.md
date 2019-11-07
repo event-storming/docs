@@ -154,3 +154,8 @@ http localhost:8081/orders productId=1 quantity=3 customerId="1@uengine.org" cus
 >> order 서비스를 실행할때 product 서비스에서 request 방식으로 재고를 체크하고 싶을때는  
 >> mvn spring-boot:run -DcheckStock=true  
 >> 로 order 서비스를 실행하면 됩니다.  
+
+
+https://us04web.zoom.us/j/757026047?pwd=R0hNTWk2d01tcEJyT1U4VlJwVjFMZz09
+
+
