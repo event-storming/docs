@@ -156,6 +156,5 @@ http localhost:8081/orders productId=1 quantity=3 customerId="1@uengine.org" cus
 >> 로 order 서비스를 실행하면 됩니다.  
 
 
-
-https://us04web.zoom.us/j/406974072?pwd=Y3hCWVhoeDJLR1Z6dkFPS1lDaG04dz09
+https://us04web.zoom.us/j/756344349?pwd=V2t6aGtFeHAvOEd6cHNrVEJnTGdyQT09
 
