@@ -172,4 +172,4 @@ http localhost:8081/orders productId=1 quantity=3 customerId="1@uengine.org" cus
 >> mvn spring-boot:run -DcheckStock=true  
 >> 로 order 서비스를 실행하면 됩니다.  
 
-https://us04web.zoom.us/j/250710680?pwd=ckNHdUdEYzdWYzJ3bXhYME1IRVZidz09
+https://us04web.zoom.us/j/229433025?pwd=RHl5b1FGbnlwL2UvVW5NMm95b2FmZz09
