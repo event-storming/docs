@@ -29,7 +29,7 @@ https://cloud.google.com/
    - Deep dive: https://dataintensive.net/?fbclid=IwAR3OSWkhqRjLI9gBoMpbsk-QGxeLpTYVXIJVCSaw_A5eYrBDc0piKSm4pMM
 
 - API design and REST: 
-    http://pepa.holla.cz/wp-cont…/…/2016/01/REST-in-Practice.pdf
+    https://pepa.holla.cz/wp-content/uploads/2016/01/REST-in-Practice.pdf
 
 
 ## 카프카 설치
