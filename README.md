@@ -15,6 +15,23 @@ http://eventstorming2code.io/
 - 구글 클라우드 : 
 https://cloud.google.com/  
 
+## 참고도서
+
+- Overall MSA Design patterns: 
+    https://www.manning.com/books/microservices-patterns
+
+- Microservice decomposition strategy:
+   - DDD distilled: https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/
+   - Event Storming: https://leanpub.com/introducing_eventstorming
+
+- Database Design in MSA: 
+   - Lightly: https://www.confluent.io/wp-content/uploads/2016/08/Making_Sense_of_Stream_Processing_Confluent_1.pdf
+   - Deep dive: https://dataintensive.net/?fbclid=IwAR3OSWkhqRjLI9gBoMpbsk-QGxeLpTYVXIJVCSaw_A5eYrBDc0piKSm4pMM
+
+- API design and REST: 
+    http://pepa.holla.cz/wp-cont…/…/2016/01/REST-in-Practice.pdf
+
+
 ## 카프카 설치
 - 다운로드  
 https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 버전으로 다운로드
