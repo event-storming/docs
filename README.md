@@ -1,8 +1,5 @@
 ## 관련자료
 
-- 교재:
-https://www.slideshare.net/pongsor/event-storming-based-msa-training-commerce-example-addhandsonv3
- 
  - PDF 교재: 
 https://github.com/event-storming/docs/blob/master/Event%20Storming%20based%20MSA%20training_commerce%20example_add_handson_20191113_v2.pdf
 
