@@ -167,7 +167,7 @@ https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%
 ## 템플릿 프로젝트는 주문이 발생하였을때 연관되어서 이벤트가 발생하도록 설계됨
 -- 주문 발생  
 http localhost:8081/orders productId=1 quantity=3 customerId="1@uengine.org" customerName="홍길동" customerAddr="서울시"  
--- 주문 취소
+-- 주문 취소  
 http PATCH localhost:8081/orders/1 state=OrderCancelled   
 
 >> order 서비스를 실행할때 product 서비스에서 request 방식으로 재고를 체크하고 싶을때는  
