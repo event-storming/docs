@@ -76,6 +76,10 @@ bin/windows/kafka-server-start.bat config/server.properties
 블랙리스트 추가 - mypage
 
 
+주문 취소함 - order  
+주문 취소함 - 상품 수량 변경됨 - product  
+주문이 취소함 - 배송 취소됨 – delivery  
+
 
 ## 1번 시나리오 - ui 없이 order, product, delivery, marketing, service_center 프로젝트를 실행하고 주문이벤트 발생
 
