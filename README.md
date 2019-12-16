@@ -15,7 +15,7 @@ http://eventstorming2code.io/
 - 구글 클라우드 : 
 https://cloud.google.com/  
 
-- Quick Tour 실습  :
+- Quick Tour 실습 난이도 조사  :
 https://docs.google.com/forms/d/e/1FAIpQLSe0nb4_C8myV23BNgqRevQvoNCEP6OSIlxDtVfRgcunxW39Cw/viewform
 
 ## 참고도서
