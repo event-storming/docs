@@ -1,8 +1,7 @@
 ## 관련자료
 
  - PDF 교재: 
-https://github.com/event-storming/docs/blob/master/Event%20Storming%20based%20MSA%20training_commerce%20example_add_handson_20191113_v2.pdf
-
+https://github.com/event-storming/docs/blob/master/Event%20Storming%20based%20MSA%20training_191216-CNS%EA%B5%90%EC%9C%A1%EA%B5%90%EC%9E%AC.pdf
 - 실습스크립트 룩업:
 https://workflowy.com/s/msa/27a0ioMCzlpV04Ib
 
