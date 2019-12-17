@@ -44,20 +44,20 @@ https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 버전으로
 - 이벤트 발행하기  
 
 ---- window   
-bin/windows/kafka-console-producer.bat --broker-list http://35.200.47.242:31090 --topic eventTopic
+bin/windows/kafka-console-producer.bat --broker-list http://34.84.246.226:31090 --topic eventTopic
 
 ---- mac  
-bin/kafka-console-producer --broker-list http://35.200.47.242:31090 --topic eventTopic
+bin/kafka-console-producer --broker-list http://34.84.246.226:31090 --topic eventTopic
 
 
 - 이벤트 수신하기
 
 ---- window   
-bin/windows/kafka-console-consumer.bat --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
+bin/windows/kafka-console-consumer.bat --bootstrap-server http://34.84.246.226:31090 --topic eventTopic --from-beginning
 
 
 ---- mac  
-bin/kafka-console-consumer.sh --bootstrap-server http://35.200.47.242:31090 --topic eventTopic --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server http://34.84.246.226:31090 --topic eventTopic --from-beginning
 
 
 ## 카프카 서버의 실행 (필요한 경우만)
