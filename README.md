@@ -168,11 +168,9 @@ git clone https://github.com/event-storming/[username]/products.git
 
 https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
 
-SSL Error발생시, 실행 : 
- - python -m pip install --upgrade pip
- - pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org httpie
-
-
+SSL Certificate Error 발생시: 
+ - pip install --trusted-host files.pythonhosted.org httpie
+ 
 
 ## 템플릿 프로젝트는 주문이 발생하였을때 연관되어서 이벤트가 발생하도록 설계됨
 -- 주문 발생  
