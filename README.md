@@ -168,7 +168,7 @@ git clone https://github.com/event-storming/[username]/products.git
 
 https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
 
-SSL Certificate Error 발생시: 
+Python 설치 후 httipie 설치 시, SSL Certificate Error 우회 방안 : 
  - pip install --trusted-host files.pythonhosted.org httpie
  
 
