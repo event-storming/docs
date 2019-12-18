@@ -168,7 +168,9 @@ git clone https://github.com/event-storming/[username]/products.git
 
 https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
 
-SSL Error발생시, 실행 : pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org httpie
+SSL Error발생시, 실행 : 
+ - python -m pip install --upgrade pip
+ - pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org httpie
 
 
 
