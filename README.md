@@ -175,6 +175,8 @@ git clone https://github.com/event-storming/[username]/products.git
 
 https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
 
+환경변수 등록: windows10 Windows+R 창에서 **sysdm.cpl ,3** 입력 후 설정
+
 Python 설치 후 httpie 설치 시, SSL Certificate Error 우회 방안 : 
  - pip install --trusted-host files.pythonhosted.org httpie
  
