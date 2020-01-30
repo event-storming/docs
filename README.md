@@ -49,7 +49,7 @@ bin/windows/kafka-console-producer.bat --broker-list http://35.200.2.67:31090 --
 bin/kafka-console-producer --broker-list http://35.200.2.67:31090 --topic eventTopic
 
 --- cluster  
-kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-producer --broker-list http://35.200.2.67:31090 --topic eventTopic
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-producer --broker-list http://34.85.53.217:31090 --topic eventTopic
 
 
 - 이벤트 수신하기
@@ -63,7 +63,7 @@ bin/kafka-console-consumer.sh --bootstrap-server http://35.200.2.67:31090 --topi
 
 
 ---- cluster  
-kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server http://35.200.2.67:31090 --topic eventTopic --from-beginning
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server http://34.85.53.217:31090 --topic eventTopic --from-beginning
 
 
 ## 카프카 서버의 실행 (필요한 경우만)
