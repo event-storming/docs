@@ -1,7 +1,7 @@
 ## 관련자료
 
  - PDF 교재: 
-https://github.com/event-storming/docs/blob/master/__%EA%B5%90%EC%9E%AC-Event%20Storming%20based%20MSA%20training_3rd_Jan_2020.pdf
+https://github.com/event-storming/docs/blob/master/__%E1%84%80%E1%85%AD%E1%84%8C%E1%85%A2-Azure-pipeline.pdf
 - 실습스크립트 룩업:
 https://workflowy.com/s/msa/27a0ioMCzlpV04Ib
 
