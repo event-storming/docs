@@ -193,5 +193,3 @@ http PATCH localhost:8081/orders/1 state=OrderCancelled
 
 
 
-https://us04web.zoom.us/j/328757422?pwd=WGdjSXFkYjFGMnBzZkVDbjN0U0RCZz09
-
