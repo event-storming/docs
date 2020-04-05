@@ -68,9 +68,9 @@ kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootst
 
 ## 카프카 서버의 실행 (필요한 경우만)
 ---- window   
-- (새창)주키퍼 실행
+- (새창)주키퍼 실행  
 bin/windows/zookeeper-server-start.bat config/zookeeper.properties
-- (새창)카프카 실행
+- (새창)카프카 실행  
 bin/windows/kafka-server-start.bat config/server.properties
 
 ---- mac  (brew 로 설치시)
