@@ -36,42 +36,48 @@ https://docs.google.com/forms/d/e/1FAIpQLSe0nb4_C8myV23BNgqRevQvoNCEP6OSIlxDtVfR
 
 ## 카프카 설치
 - 다운로드  
-https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 버전으로 다운로드
+https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 (binary)버전으로 다운로드  
 
 ## eventTopic 이라는 Topic 에 메세지 통신
 
 - 이벤트 발행하기  
 
 ---- window   
-bin/windows/kafka-console-producer.bat --broker-list http://35.200.2.67:31090 --topic eventTopic
+bin/windows/kafka-console-producer.bat --broker-list http://localhost:9092 --topic eventTopic
 
 ---- mac  
-bin/kafka-console-producer --broker-list http://35.200.2.67:31090 --topic eventTopic
+bin/kafka-console-producer --broker-list http://localhost:9092 --topic eventTopic
 
 --- cluster  
-kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-producer --broker-list http://34.85.53.217:31090 --topic eventTopic
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-producer --broker-list http://localhost:9092 --topic eventTopic
 
 
 - 이벤트 수신하기
 
 ---- window   
-bin/windows/kafka-console-consumer.bat --bootstrap-server http://35.200.2.67:31090 --topic eventTopic --from-beginning
+bin/windows/kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic eventTopic --from-beginning
 
 
 ---- mac  
-bin/kafka-console-consumer.sh --bootstrap-server http://35.200.2.67:31090 --topic eventTopic --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic eventTopic --from-beginning
 
 
 ---- cluster  
-kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server http://34.85.53.217:31090 --topic eventTopic --from-beginning
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server http://localhost:9092 --topic eventTopic --from-beginning
 
 
 ## 카프카 서버의 실행 (필요한 경우만)
+---- window   
 - (새창)주키퍼 실행
 bin/windows/zookeeper-server-start.bat config/zookeeper.properties
 - (새창)카프카 실행
 bin/windows/kafka-server-start.bat config/server.properties
 
+---- mac  (brew 로 설치시)
+- 주키퍼 실행  
+zkserver start  
+- 카프카 실행  
+/usr/local/bin/kafka-server-start /usr/local/etc/kafka/server.properties
 
 ## 이벤트 발송 시나리오
 
