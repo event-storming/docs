@@ -39,7 +39,11 @@ https://docs.google.com/forms/d/e/1FAIpQLSe0nb4_C8myV23BNgqRevQvoNCEP6OSIlxDtVfR
 https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 (binary)버전으로 다운로드  
 
 ## eventTopic 이라는 Topic 에 메세지 통신
+- 토픽 생성
+kafka-topics.bat --zookeeper localhost:2181 --topic eventTopic --create --partitions 1 --replication-factor 1
 
+- 토픽 리스트 보기
+kafka-topics.bat --zookeeper localhost:2181 --list
 - 이벤트 발행하기  
 
 ---- window   
