@@ -80,10 +80,10 @@ cd bin/window
 zookeeper-server-start.bat ../../config/zookeeper.properties
 
 - (새창)카프카 실행  
-bin/windows/kafka-server-start.bat config/server.properties. 
+bin/windows/kafka-server-start.bat config/server.properties  
 or  
 cd bin/window  
-kafka-server-start.bat ../../config/zookeeper.properties
+kafka-server-start.bat ../../config/server.properties
 
 ---- mac  (brew 로 설치시)
 - 주키퍼 실행  
