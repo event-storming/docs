@@ -42,8 +42,13 @@ https://kafka.apache.org/downloads  ==> 최근 버전의 Scala 2.12 (binary)버�
 - 토픽 생성  
 kafka-topics.bat --zookeeper localhost:2181 --topic eventTopic --create --partitions 1 --replication-factor 1  
 
+kubectl -n kafka exec my-kafka-0 -- /usr/bin/kafka-topics --zookeeper my-kafka-zookeeper:2181 --topic eventTopic --create --partitions 1 --replication-factor 1
+
+
 - 토픽 리스트 보기  
 kafka-topics.bat --zookeeper localhost:2181 --list  
+
+kubectl -n kafka exec my-kafka-0 -- /usr/bin/kafka-topics --zookeeper my-kafka-zookeeper:2181 --list
 
 - 이벤트 발행하기  
 
