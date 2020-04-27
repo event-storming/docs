@@ -81,13 +81,13 @@ kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootst
 - (새창)주키퍼 실행  
 bin/windows/zookeeper-server-start.bat config/zookeeper.properties  
 or  
-cd bin/window   
+cd bin/windows   
 zookeeper-server-start.bat ../../config/zookeeper.properties
 
 - (새창)카프카 실행  
 bin/windows/kafka-server-start.bat config/server.properties  
 or  
-cd bin/window  
+cd bin/windows  
 kafka-server-start.bat ../../config/server.properties
 
 ---- mac  (brew 로 설치시)
