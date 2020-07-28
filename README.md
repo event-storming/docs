@@ -33,6 +33,9 @@ https://docs.google.com/forms/d/e/1FAIpQLSe0nb4_C8myV23BNgqRevQvoNCEP6OSIlxDtVfR
 - API design and REST: 
     https://pepa.holla.cz/wp-content/uploads/2016/01/REST-in-Practice.pdf
 
+## AWS 접속 URL
+- #1. https://kcloud-academy.signin.aws.amazon.com/console
+- #2. https://kttestpyj.signin.aws.amazon.com/console
 
 ## 카프카 설치
 - 다운로드  
